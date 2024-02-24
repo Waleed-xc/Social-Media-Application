@@ -1,9 +1,12 @@
 import { currentUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
+
 import ThreadCard from "@/components/cards/ThreadCard";
 import Pagination from "@/components/shared/Pagination";
+
 import { fetchPosts } from "@/lib/actions/thread.actions";
 import { fetchUser } from "@/lib/actions/user.actions";
+
 async function Home({
   searchParams,
 }: {
@@ -56,33 +59,3 @@ async function Home({
 }
 
 export default Home;
-
-
-// "use client"
-// import { UserButton } from "@clerk/nextjs";
-
-// export default function Home() {
-//   return (
-// <>
-// <UserButton/>
-// <h1 className="head-text text-left">Home</h1>
-
-
-
-
-
-// </>
-
-
-
-
-
-
-
-
-
-
-
-//   );
-// }
-
